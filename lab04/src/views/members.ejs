@@ -1,0 +1,11 @@
+<%- include('partials/header.ejs')%> <% if(membersData.length === 0){ %>
+<h2>No Users</h2>
+<% } else { %>
+<ul>
+	<% membersData.forEach(function(ele){ %>
+	<li>
+		<h2><a href="/api/members/<%= ele.id %>"><%= ele.name %></a></h2>
+	</li>
+	<% }) %>
+</ul>
+<% } %> <%- include('partials/footer.ejs') %>

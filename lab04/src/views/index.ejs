@@ -1,0 +1,26 @@
+<%- include('partials/header.ejs')%>
+
+<div>
+	<h1>All members</h1>
+	<div>
+		<form action="api/members" method="post">
+			<input type="text" name="name" />
+			<input type="email" name="email" />
+			<button type="submit">Add</button>
+		</form>
+	</div>
+
+	<% if(membersData.length === 0){ %>
+	<h2>No Users</h2>
+	<% } else { %>
+	<ul>
+		<% membersData.forEach(function(ele){ %>
+		<li>
+			<h2><a href="/api/members/<%= ele.id %>"><%= ele.name %></a></h2>
+		</li>
+		<% }) %>
+	</ul>
+	<% } %>
+</div>
+
+<%- include('partials/footer.ejs') %>

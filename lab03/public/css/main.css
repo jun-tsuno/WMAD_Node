@@ -1,0 +1,38 @@
+body {
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+a {
+	margin-bottom: 10px;
+	color: blue;
+	text-decoration: underline;
+	text-underline-offset: 4px;
+}
+
+li {
+	width: 300px;
+	list-style-type: none;
+	padding: 10px;
+}
+
+form {
+	width: 90%;
+	max-width: 500px;
+	margin-bottom: 20px;
+}
+
+input[type='text'] {
+	width: 70%;
+	padding: 6px 10px;
+	border: 1px solid black;
+}
+
+button {
+	width: 20%;
+	padding: 5px;
+	background: transparent;
+	cursor: pointer;
+}
